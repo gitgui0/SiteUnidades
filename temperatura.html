@@ -7,20 +7,32 @@
 </head>
 <body>
     <div>
-        <label for="temperatura">Inserir Temperatura em Celsius</label>
-        <input type="text" name="temperatura" id="temperatura">
-        
-        <button>Converter °C para °F</button>
+        <label for="celsius">Inserir Temperatura em Celsius</label>
+        <input type="text" name="celsius" id="celsius">
+        <button onclick="convertCtoF()">Converter °C para °F</button>
 
-        <label for="temperatura">Inserir Temperatura em Fahrenheit</label>
-        <input type="text" name="temperatura" id="temperatura">
-        
-        <button>Converter °F para °C</button>
+        <label for="fahrenheit">Inserir Temperatura em Fahrenheit</label>
+        <input type="text" name="fahrenheit" id="fahrenheit">
+        <button onclick="convertFtoC()">Converter °F para °C</button>
 
         <p id="Erro"></p>
 
-        <h2 id="resultado">Resultado</h2>
-        <p>Resultado</p>
+        <h2>Resultado</h2>
+        <p id="resultado">Resultado</p>
     </div>
+
+    <script>
+        function convertCtoF() {
+           let celsius =  document.getElementById("celsius").value;
+           let resultado= (celsius*1.8)+32;
+
+           resultadoBox = document.getElementById("resultado");
+           resultadoBox.innerHTML = resultado + "°F";
+        }
+
+        function convertFtoC() {
+            
+        }
+    </script>
 </body>
 </html>
