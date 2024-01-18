@@ -5,20 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperatura</title>
 </head>
+<style>
+    *{
+        font-family: sans-serif;
+    }
+    .barra{
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        
+
+        margin-right: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        margin:0px 10px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+
+    .container2{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .container3{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+</style>
 <body>
-    <div>
-        <label for="celsius">Inserir Temperatura em Celsius</label>
-        <input type="text" name="celsius" id="celsius">
-        <button onclick="convertCtoF()">Converter °C para °F</button>
-
-        <label for="fahrenheit">Inserir Temperatura em Fahrenheit</label>
-        <input type="text" name="fahrenheit" id="fahrenheit">
-        <button onclick="convertFtoC()">Converter °F para °C</button>
-
+    <div class="barra"><h1>Convertor</h1>
+    <ul>
+        <li>
+            <a href="dinheiro.html">Dinheiro</a>
+            <a href="medidas.html">Medidas</a>
+            <a href="temperatura.html">Temperatura</a>
+        </li>
+    </ul>
+</div>
+    <div class="container">
+        <div class="container2">
+        <div>
+            <label for="celsius">Inserir Temperatura em Celsius</label>
+            <input type="text" name="celsius" id="celsius">
+            <button onclick="convertCtoF()">Converter °C para °F</button>
+        </div>
+        <div>
+            <label for="fahrenheit">Inserir Temperatura em Fahrenheit</label>
+            <input type="text" name="fahrenheit" id="fahrenheit">
+            <button onclick="convertFtoC()">Converter °F para °C</button>
+        </div>
+        </div>
         <p id="Erro"></p>
-
-        <h2>Resultado</h2>
-        <p id="resultado">Resultado</p>
+        <div class="container3">
+            
+            <h2>Resultado</h2>
+            <p id="resultado">Resultado</p>
+        </div>
+        
     </div>
 
     <script>
