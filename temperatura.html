@@ -27,11 +27,15 @@
            let resultado= (celsius*1.8)+32;
 
            resultadoBox = document.getElementById("resultado");
-           resultadoBox.innerHTML = resultado + "°F";
+           resultadoBox.innerHTML = Math.round(resultado) + "°F";
         }
 
         function convertFtoC() {
-            
+           let fahrenheit =  document.getElementById("fahrenheit").value;
+           let resultado= (fahrenheit*0.56)-32;
+
+           resultadoBox = document.getElementById("resultado");
+           resultadoBox.innerHTML = Math.round(resultado) + "°C";
         }
     </script>
 </body>
