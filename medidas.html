@@ -7,22 +7,25 @@
 </head>
 <body>
     <div>
-        <label for="medidas">Centimetros: </label> <br>
+        <h2>Converter medidas</h2>
+        <label for="medidas">Centimetros para Pulugadas</label>
+        <input type="number" placeholder="centimetros" oninput="cmtoin(this.value)" onchange="cmtoin(this.value)" id="inputcm">
+        <p>Resultado em pulugadas(in): <span id="outputin"></span></p>
 
-        <input type="text" name="medidas" id="medidas"><br>
-
-        <button>converter cm para in</button><br>
-
-        <label for="medidas">Pulugadas: </label><br>
-
-        <input type="text" name="medidas" id="medidas"><br>
-
-        <button>converter in para cm</button><br>
+        <label for="medidas">Pulugadas para Centimetros </label>
+        <input type="number" placeholder="pulugadas" oninput="intocm(this.value)" onchange="intocm(this.value)" id="inputin">
+        <p>Resultado em centimetros(cm): <span id="outputcm"></span></p>
 
         <p id="Erro"></p>
-
-        <h2 id="Resultado">Resultado</h2>
-        <p>Resultado</p>
+        
     </div>
+    <script>
+        function cmtoin(valNum){
+            document.getElementById("outputin").innerHTML=valNum*0.3937;
+        }
+        function intocm(valNum){
+            document.getElementById("outputcm").innerHTML=valNum/0.3937;
+        }
+    </script>
 </body>
 </html>
