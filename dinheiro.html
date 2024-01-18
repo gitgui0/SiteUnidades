@@ -7,42 +7,36 @@
 </head>
 <body>
     <div>
-        <label for="dinheiro">Inserir Euros(€) para Libras(£)</label>
-        <input type="text" name="dinheiro" id="dinheiro">
-        
-        <button>Converter</button>
+        <label for="libras">Inserir Euros(€) para Libras(£)</label>
+        <input type="text" name="euros" id="euros">
+        <button onclick="converterEurosParaLibras()">Converter</button>
 
-        <label for="dinheiro">Inserir Libras(£) para Euros(€)</label>
-        <input type="text" name="dinheiro" id="dinheiro">
-        
-        <button>Converter</button>
+        <label for="euros">Inserir Libras(£) para Euros(€)</label>
+        <input type="text" name="libras" id="libras">
+        <button onclick="converterLibrasParaEuros()">Converter</button>
 
         <p id="Erro"></p>
 
-        <h2 id="resultado">Resultado</h2>
-        <p>Resultado</p>
+        <h2>Resultado</h2>
+        <p id="resultado">Resultado</p>
     </div>
     
     <script>
-        function converterEurosParaLibras() {
-    let taxaDeCambio = 0.85; // Taxa de câmbio atual (exemplo)
-    let euros * taxaDeCambio;
-    }
+        function converterEurosParaLibras(){
+            let eurosInput = document.getElementById("euros");
+            let resultado = parseFloat(eurosInput.value) * 0.86;
 
-    function converterLibrasParaEuros() {
-    let taxaDeCambio = 1.18; // Taxa de câmbio atual (exemplo)
-    let libras * taxaDeCambio;
-    }
+            let resultadoBox = document.getElementById("resultado");
+            resultadoBox.innerHTML = resultado + "£";
+        }
 
-    // Exemplos de uso
-    const eurosParaConverter = 100;
-    const librasParaConverter = 80;
+        function converterLibrasParaEuros(){
+            let librasInput = document.getElementById("libras");
+            let resultado = parseFloat(librasInput.value) / 0.86;
 
-    const resultadoLibras = converterEurosParaLibras(eurosParaConverter);
-    const resultadoEuros = converterLibrasParaEuros(librasParaConverter);
-
-    console.log(`${eurosParaConverter} euros são ${resultadoLibras} libras.`);
-    console.log(`${librasParaConverter} libras são ${resultadoEuros} euros.`);
+            let resultadoBox = document.getElementById("resultado");
+            resultadoBox.innerHTML = resultado + "€";
+        }
     </script>
 </body>
 </html>
