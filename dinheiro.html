@@ -57,8 +57,35 @@ h2 {
     margin-top: 10px;
 }
 
+    *{
+        font-family: sans-serif;
+    }
+    .barra{
+        display: flex;
+        justify-content: space-between;
+    }
+    li{
+        
+
+        margin-right: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        margin:0px 10px;
+    }
+
 </style>
 <body>
+    <div class="barra"><h1>Convertor</h1>
+        <ul>
+            <li>
+                <a href="dinheiro.html">Dinheiro</a>
+                <a href="medidas.html">Medidas</a>
+                <a href="temperatura.html">Temperatura</a>
+            </li>
+        </ul>
+    </div>
     <div>
         <label for="libras">Inserir Euros(€) para Libras(£)</label>
         <input type="text" name="euros" id="euros">
